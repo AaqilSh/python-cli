@@ -1,0 +1,1 @@
+This is a simple CLI tool that will help to make everydar workflow easier 
