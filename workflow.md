@@ -9,3 +9,4 @@ Functional Requirements
 
 Non-functional requirements
 - Have colored fonts
+- Have nice looking fonts
