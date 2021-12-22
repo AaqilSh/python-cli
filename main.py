@@ -15,5 +15,10 @@ def add(num1: int, num2: int):
     typer.echo(typer.style(num1+num2, fg=typer.colors.RED))
 
 
+@app.command()
+def flutterr():
+    pass
+
+
 if __name__ == '__main__':
     app()
