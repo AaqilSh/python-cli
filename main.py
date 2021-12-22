@@ -1,9 +1,12 @@
 import typer
 
+app = typer.Typer()
 
-def main(name: str):
-    typer.echo(f"Hello {name}!")
+
+@app.command()
+def hello(name: str):
+    typer.echo(f"Hello {name}", color=typer.colors.RED)
 
 
 if __name__ == '__main__':
-    typer.run(main)
+    app()
