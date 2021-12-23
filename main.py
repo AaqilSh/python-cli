@@ -1,4 +1,5 @@
-import click
+import subprocess
+import os
 import typer
 
 app = typer.Typer()
@@ -17,7 +18,10 @@ def add(num1: int, num2: int):
 
 @app.command()
 def flutterr():
-    pass
+    os.chdir('/home/aaqil/python/projects/experiments/')
+    wd = os.getcwd()
+    # subprocess.call
+    typer.echo(wd)
 
 
 if __name__ == '__main__':
