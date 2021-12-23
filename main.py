@@ -1,3 +1,4 @@
+from pickle import FALSE
 import subprocess
 import os
 import typer
@@ -22,6 +23,11 @@ def flutterr():
     wd = os.getcwd()
     # subprocess.call
     typer.echo(wd)
+
+
+@app.command()
+def dirr(create: bool = True, rename: bool = FALSE):
+    pass
 
 
 if __name__ == '__main__':
