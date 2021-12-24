@@ -1,4 +1,3 @@
-from pickle import FALSE
 import subprocess
 import os
 import typer
@@ -27,7 +26,7 @@ def flutterr():
 
 
 @app.command()
-def dirr(create: bool = True, rename: bool = FALSE):
+def dirr(create: bool = True, rename: bool = False):
     pass
 
 
