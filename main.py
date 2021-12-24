@@ -28,6 +28,8 @@ def flutterr():
 @app.command()
 def dirr(create: bool = True, rename: bool = False):
     os.chdir('/home/aaqil/python/projects/experiments/')
+    # print(os.getcwd())
+    subprocess.run(['ls'])
 
 
 if __name__ == '__main__':
