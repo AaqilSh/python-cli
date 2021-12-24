@@ -31,7 +31,7 @@ def dirr(create: bool = True, rename: bool = False):
     if create == True and rename == False:
         name = typer.prompt('Enter the folder name')
         subprocess.run(['mkdir', name])
-        print(os.getcwd())
+        subprocess.run(['ls'])
     else:
         name = typer.prompt('Enter the folder name')
         source = os.path.join(os.getcwd(), name)
