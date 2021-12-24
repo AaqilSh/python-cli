@@ -29,13 +29,8 @@ def flutterr():
 def dirr(create: bool = True, rename: bool = False):
     os.chdir('/home/aaqil/python/projects/experiments/')
     if create == True and rename == False:
-        # name = typer.prompt('Enter the folder name')
-        # typer.progressbar(length=50000)
-        with typer.progressbar(length=5000) as bar:
-            bar.start
-            bar.update(2000)
-
-        # subprocess.run(['mkdir', name])
+        name = typer.prompt('Enter the folder name')
+        subprocess.run(['mkdir', name])
         print(os.getcwd())
     else:
         name = typer.prompt('Enter the folder name')
