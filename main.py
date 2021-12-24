@@ -29,14 +29,15 @@ def flutterr():
 def dirr(create: bool = True, rename: bool = False):
     os.chdir('/home/aaqil/python/projects/experiments/')
     if create == True and rename == False:
-        subprocess.run(['mkdir', 'hello'])
+        name = typer.prompt('Enter the folder name')
+        subprocess.run(['mkdir', name])
         print(os.getcwd())
     else:
-        source = os.path.join(os.getcwd(), 'hello')
+        name = typer.prompt('Enter the folder name')
+        source = os.path.join(os.getcwd(), name)
         tar = typer.prompt('Enter the new folder name')
         tar = os.path.join(os.getcwd(), tar)
         subprocess.run(['mv', source, tar])
-
         subprocess.run(['ls'])
         print(os.getcwd())
 
