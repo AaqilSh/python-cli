@@ -27,12 +27,17 @@ def flutterr():
 
 @app.command()
 def dirr(create: bool = True, rename: bool = False):
+    os.chdir('/home/aaqil/python/projects/experiments/')
     if create == True and rename == False:
-        os.chdir('/home/aaqil/python/projects/experiments/')
         subprocess.run(['mkdir', 'hello'])
         print(os.getcwd())
     else:
-        print('rename')
+        source = os.path.join(os.getcwd(), 'hello')
+        tar = os.path.join(os.getcwd(), 'new')
+        subprocess.run(['mv', source, tar])
+        subprocess.run(['ls'])
+
+        print(os.getcwd())
 
 
 if __name__ == '__main__':
