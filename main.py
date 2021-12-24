@@ -28,10 +28,7 @@ def flutterr():
 @app.command()
 def dirr(create: bool = True, rename: bool = False):
     os.chdir('/home/aaqil/python/projects/experiments/')
-    try:
-        subprocess.run(['mkdir', 'hello'])
-    except:
-        print('error')
+    subprocess.run(['mkdir', 'hello'])
     print(os.getcwd())
 
 
