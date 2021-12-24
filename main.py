@@ -21,8 +21,9 @@ def add(num1: int, num2: int):
 def flutterr():
     os.chdir('/home/aaqil/python/projects/experiments/')
     wd = os.getcwd()
-    # subprocess.call
-    typer.echo(wd)
+    # subprocess.run(['rmdir', 'newfolder'])
+    subprocess.run('ls')
+   # typer.echo(wd)
 
 
 @app.command()
