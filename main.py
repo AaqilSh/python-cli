@@ -33,10 +33,11 @@ def dirr(create: bool = True, rename: bool = False):
         print(os.getcwd())
     else:
         source = os.path.join(os.getcwd(), 'hello')
-        tar = os.path.join(os.getcwd(), 'new')
+        tar = typer.prompt('Enter the new folder name')
+        tar = os.path.join(os.getcwd(), tar)
         subprocess.run(['mv', source, tar])
-        subprocess.run(['ls'])
 
+        subprocess.run(['ls'])
         print(os.getcwd())
 
 
