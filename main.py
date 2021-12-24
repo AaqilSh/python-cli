@@ -27,7 +27,7 @@ def flutterr():
 
 @app.command()
 def dirr(create: bool = True, rename: bool = False):
-    pass
+    os.chdir('/home/aaqil/python/projects/experiments/')
 
 
 if __name__ == '__main__':
