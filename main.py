@@ -23,7 +23,7 @@ def flutterr():
     wd = os.getcwd()
     # subprocess.run(['rmdir', 'newfolder'])
     subprocess.run('ls')
-   # typer.echo(wd)
+    typer.echo(wd)
 
 
 @app.command()
