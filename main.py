@@ -33,8 +33,8 @@ def dirr(create: bool = True, rename: bool = False):
         subprocess.run(['mkdir', name])
         subprocess.run(['ls'])
     else:
-        name = typer.prompt('Enter the folder name')
-        if name != None:
+        name = typer.prompt('Enter the folder name', err=True)
+        if name in os.listdir():
             source = os.path.join(os.getcwd(), name)
             tar = typer.prompt('Enter the new folder name')
             tar = os.path.join(os.getcwd(), tar)
