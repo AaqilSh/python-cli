@@ -40,8 +40,7 @@ def dirr(create: bool = True, rename: bool = False):
             tar = os.path.join(os.getcwd(), tar)
             subprocess.run(['mv', source, tar])
             subprocess.run(['ls'])
-            print(os.getcwd())
-            typer.echo('Done')
+            typer.echo(f"renamed folder to {name}")
         else:
             typer.echo('Sorry the folder is not availabe')
 
