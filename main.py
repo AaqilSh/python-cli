@@ -44,7 +44,6 @@ def dirr(create: bool = True, rename: bool = False):
             typer.echo('Done')
         else:
             typer.echo('Sorry the folder is not availabe')
-    # subprocess.run(['ls'])
 
 
 if __name__ == '__main__':
