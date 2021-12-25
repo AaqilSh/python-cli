@@ -40,7 +40,6 @@ def dirr(create: bool = True, rename: bool = False):
         subprocess.run(['mv', source, tar])
         subprocess.run(['ls'])
         print(os.getcwd())
-    # os.chdir('/home/aaqil/python/projects/experiments/')
     subprocess.run(['ls'])
 
 
