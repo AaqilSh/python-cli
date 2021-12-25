@@ -34,12 +34,16 @@ def dirr(create: bool = True, rename: bool = False):
         subprocess.run(['ls'])
     else:
         name = typer.prompt('Enter the folder name')
-        source = os.path.join(os.getcwd(), name)
-        tar = typer.prompt('Enter the new folder name')
-        tar = os.path.join(os.getcwd(), tar)
-        subprocess.run(['mv', source, tar])
-        subprocess.run(['ls'])
-        print(os.getcwd())
+        if name != None:
+            source = os.path.join(os.getcwd(), name)
+            tar = typer.prompt('Enter the new folder name')
+            tar = os.path.join(os.getcwd(), tar)
+            subprocess.run(['mv', source, tar])
+            subprocess.run(['ls'])
+            print(os.getcwd())
+            typer.echo('Done')
+        else:
+            typer.echo('Sorry')
     subprocess.run(['ls'])
 
 
