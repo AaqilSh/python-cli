@@ -29,7 +29,7 @@ def flutterr():
 def dirr(create: bool = True, rename: bool = False):
     os.chdir('/home/aaqil/python/projects/experiments/')
     if create == True and rename == False:
-        name = typer.prompt('Enter the folder name')
+        name = typer.prompt('Enter the new folder name')
         subprocess.run(['mkdir', name])
         subprocess.run(['ls'])
     else:
